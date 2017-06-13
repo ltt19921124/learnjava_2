@@ -51,7 +51,7 @@ public class MapDemo {
 		
 		
 		//取出map中的所有元素，
-		//原理是先通过keyset方法获取map中所有的键，所在的set集合，再通过set的迭代器获取每一个键
+		//原理是先通过keyset方法获取map中所有的键所在的set集合，再通过set的迭代器获取每一个键
 		//再对每一个键通过map集合deget方法获取其对应的值即可
 		
 		/*
