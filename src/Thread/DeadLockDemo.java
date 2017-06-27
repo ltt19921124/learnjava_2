@@ -1,6 +1,6 @@
 package Thread;
 
-class Ticket_1 implements Runnable{
+class Ticket_2 implements Runnable{
 	private static int num = 100;
 	Object obj = new Object();
 	
@@ -12,40 +12,35 @@ class Ticket_1 implements Runnable{
 //		System.out.println("this:" + this);
 		if (flag)
 			while (true) {
-				synchronized (Ticket_1.class){//this.getClass()
-					if (num > 0){
-						try{
-							Thread.sleep(10);
-						} catch(InterruptedException e) {
-							
-						}
-						System.out.println(Thread.currentThread().getName() + "...obj..." + num--);
-					}
+				synchronized (obj) {
+					show();
 				}
 			}
 		else 
 			while (true)
 				show();
 	}
-	public static synchronized void show() {
-		if (num > 0){
-			try{
-				Thread.sleep(10);
-			} catch(InterruptedException e) {
-				
+	public synchronized void show() {
+		synchronized (obj){
+			if (num > 0){
+				try{
+					Thread.sleep(10);
+				} catch(InterruptedException e) {
+					
+				}
+				System.out.println(Thread.currentThread().getName() + "...function..." + num--);
 			}
-			System.out.println(Thread.currentThread().getName() + "...function..." + num--);
 		}
 	}
 	
 }
 
 
-class SynFunctionLockDemo {
+public class DeadLockDemo {
 
 	public static void main(String[] args) {
 		
-		Ticket_1 t = new Ticket_1();//
+		Ticket_2 t = new Ticket_2();//
 //		System.out.println("t:" + t);
 //		Class clazz = t.getClass();
 //		Class clazz_1 = Ticket.class;
@@ -62,14 +57,7 @@ class SynFunctionLockDemo {
 		}
 		t.flag = false;
 		t2.start();
-
 		
 	}
 
 }
-
-
-
-
-
-

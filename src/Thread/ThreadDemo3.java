@@ -31,7 +31,7 @@ public class ThreadDemo3 {
 			System.out.println("over..." + Thread.currentThread().getName());
 		}
 //		d3.start();
-		System.out.println(4 / 0);
+//		System.out.println(4 / 0);
 	}
 
 }
