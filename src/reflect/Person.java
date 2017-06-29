@@ -6,9 +6,11 @@ public class Person {
 	
 	public Person(int age, String name) {
 		super();
+		
 		this.age = age;
 		this.name = name;
-		System.out.println("Person run.." + this.name + ":" + this.age);
+		
+		System.out.println("Person run..." + this.name + ":" + this.age);
 	}
 
 	public Person() {
@@ -18,6 +20,9 @@ public class Person {
 	
 	public void show() {
 		System.out.println(name + "..show run..." + age);
+	}
+	public void method() {
+		System.out.println(" method run ");
 	}
 	
 	public void paramMethod(String str,int num) {
