@@ -1,0 +1,6 @@
+ 
+ 集合框架：
+ list
+ 	|--Vector:同步的，内部是数组数据结构
+ 	|--ArrayList:jdk 1.2 底层是数组结构，不同步，替代了Vector，多线程也不用Vector，加锁或者用别的容器
+ 	|--LinkedList:内部是链表数据结构，不同步的。

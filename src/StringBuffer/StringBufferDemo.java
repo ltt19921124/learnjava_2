@@ -14,8 +14,9 @@ public class StringBufferDemo {
 //		sb.delete(1, 3);
 //		sb.delete(0, sb.length());
 //		sb = new StringBuffer();
-		sb.setLength(10);
-		System.out.println(sb);
+//		sb.setLength(10);
+//		sb.reverse();
+		System.out.println(sb.reverse());
 		
 	}
 	
