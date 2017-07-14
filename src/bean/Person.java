@@ -1,6 +1,6 @@
 package bean;
 
-public class Person {
+public class Person extends Object implements Comparable{
 	
 	private String name;
 	private int age;
@@ -14,6 +14,29 @@ public class Person {
 		this.name = name;
 		this.age = age;
 	}
+	
+	
+	@Override
+	public int hashCode() {
+//		System.out.println(this + "......hashcode");
+		
+		return name.hashCode() + age;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		
+		if (this == obj)
+			return true;
+		
+		if (!(obj instanceof Person)) 
+			throw new ClassCastException("ÀàĞÍ´íÎó");
+		
+//		System.out.println(this + "...equals..." + obj);
+		Person p = (Person) obj;
+		
+		return this.name.equals(p.name) && this.age == p.age;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -26,6 +49,32 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+	public String toString() {
+		return name + ":" + age;
+	}
+	@Override
+	public int compareTo(Object o) {
+		
+		Person p = (Person)o;
+		
+		int temp =  this.age - p.age;
+		return temp == 0?this.name.compareTo(p.name):temp;
+		
+		
+//		if (this.age > p.age) 
+//			return 1;
+//		if (this.age < p.age)
+//			return -1;
+//		
+//		if (this.age == p.age) {
+//			return this.name.compareTo(p.name);
+//		}
+//		
+//		return 0;
+		
+	}
 	
 }
+
+
+
