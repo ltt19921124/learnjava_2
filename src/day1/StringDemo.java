@@ -8,7 +8,7 @@ public class StringDemo {
 		 *String类的特点 
 		 * 
 		 */
-		stringDemo2();
+//		stringDemo2();
 		
 		
 	}
@@ -27,7 +27,7 @@ public class StringDemo {
 	
 	public static void stringDemo1() {
 		String s = "abc";//"abc"存储在字符串常量池中
-//		s = "nba";
+		s = "nba";
 		String s1 = "abc";
 		
 		System.out.println(s==s1);//true
