@@ -27,7 +27,7 @@ public class ArrayDemo4 {
 		};
 		for (int i = 0; i < per.length; i++) {
 			
-			System.out.println(per[i].info());
+			System.out.println();
 			
 		}
 	}
