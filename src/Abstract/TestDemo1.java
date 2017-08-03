@@ -35,8 +35,10 @@ class Student extends Person {
 public class TestDemo1 {
 
 	public static void main(String[] args) {
+		
 		Person per = new Student("zhna",20,"北京大学");
 		System.out.println(per.getInfo());
+		
 	}
 
 }
