@@ -35,7 +35,8 @@ public class TestDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		IFruit fruit = new Factory().getInstance(args[0]);
+		IFruit fruit = new Apple();
+		
 		fruit.eat();
 		
 		

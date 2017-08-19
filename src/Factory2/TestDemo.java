@@ -9,6 +9,7 @@ interface IFruit {
 class Factory {
 	public static IFruit getInstance(String className) {
 		
+		
 		if ("apple".equals(className)) {
 			return new Apple();
 		}
@@ -32,11 +33,17 @@ class Orange implements IFruit {
 }
 
 public class TestDemo {
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		IFruit fruit = new Factory().getInstance(args[0]);
-		fruit.eat();
+		
+//		@SuppressWarnings("static-access")
+//		IFruit fruit = new Factory().getInstance(args[0]);
+//		fruit.eat();
+		
+//		@SuppressWarnings("unused")
+//		int i = 9;
+//		System.out.println(i);
 		
 		
 	}
