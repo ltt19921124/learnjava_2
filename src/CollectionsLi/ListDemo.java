@@ -1,7 +1,9 @@
 package CollectionsLi;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ListDemo {
 
@@ -15,6 +17,7 @@ public class ListDemo {
 		list.set(1, "World");
 		System.out.println(list.get(0));
 		
+		Map<Person,String> map = new HashMap();
 		
 		
 	}
