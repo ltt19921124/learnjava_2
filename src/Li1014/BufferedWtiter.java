@@ -6,6 +6,8 @@ import java.io.IOException;
 
 public class BufferedWtiter {
 
+	private static final String LINE_SEPARATOR = System.getProperty("line.separator");
+
 	public static void main(String[] args) throws IOException {
 		
 		FileWriter fw = new FileWriter("buf.txt");
@@ -16,12 +18,24 @@ public class BufferedWtiter {
 		BufferedWriter bufw = new BufferedWriter(fw);
 		
 		
-		fw.write("abcde");
+//		bufw.write("abcdef" + LINE_SEPARATOR +"hah");
+//		bufw.write("abc");
+//		bufw.newLine();
+//		bufw.write("hehehe");
+		
+		for (int x = 1;x <= 4;x++) {
+			bufw.write("abc" + x);
+			bufw.newLine();
+
+		}
 		
 		
+		//Ë¢ÐÂÄØ
+		bufw.flush();
+		
+		bufw.close();
 		
 		
-		fw.close();
 	}
 
 }
