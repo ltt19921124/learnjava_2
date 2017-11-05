@@ -38,6 +38,7 @@ public class DeadLockTest {
 	public static void main(String[] args) {
 		Test a = new Test(true);
 		Test b = new Test(false);
+		Test c = new Test(true);
 		
 		Thread t1 = new Thread(a);
 		Thread t2 = new Thread(b);
